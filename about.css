@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background-color: #fffaf3;
+    color: #4e463c;
+  }
+  
+  header {
+    background-color: #bca38b;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 2rem;
+    color: #fff;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  
+  .about {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #f3e9da;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .about h2 {
+    color: #6c4e36;
+  }
+  
+  footer {
+    background-color: #bca38b;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  

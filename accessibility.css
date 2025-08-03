@@ -1,0 +1,110 @@
+#accessibilityPanel {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 230px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    padding: 18px 22px;
+    font-family: 'Georgia', serif;
+    color: #2e8b57;
+    font-size: 14px;
+    user-select: none;
+    z-index: 10000;
+  }
+  
+  #accessibilityPanel h3 {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+  
+  #accessibilityPanel label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  #accessibilityPanel input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #2e8b57; /* თანამედროვე ბრაუზერებში ფერის შეცვლა */
+  }
+  
+  #accessibilityPanel input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 8px;
+    border-radius: 6px;
+    background: #d5eadf;
+    outline: none;
+    margin-top: 6px;
+    margin-bottom: 10px;
+  }
+  
+  #accessibilityPanel input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    background: #2e8b57;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    margin-top: -7px;
+    box-shadow: 0 0 6px rgba(46,139,87,0.7);
+    transition: background-color 0.3s ease;
+  }
+  
+  #accessibilityPanel input[type="range"]::-moz-range-thumb {
+    width: 22px;
+    height: 22px;
+    background: #2e8b57;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 6px rgba(46,139,87,0.7);
+    transition: background-color 0.3s ease;
+  }
+  
+  #accessibilityPanel input[type="range"]:hover::-webkit-slider-thumb {
+    background-color: #3a9b5a;
+  }
+  
+  #accessibilityPanel input[type="range"]:hover::-moz-range-thumb {
+    background-color: #3a9b5a;
+  }
+  
+  /* High contrast ფერები */
+  .high-contrast {
+    background-color: #000 !important;
+    color: #ffeb3b !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .high-contrast header,
+  .high-contrast nav,
+  .high-contrast main,
+  .high-contrast footer,
+  .high-contrast section {
+    background-color: #000 !important;
+    color: #ffeb3b !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* დისპლექსიური შრიფტი */
+  .dyslexic-font {
+    font-family: 'OpenDyslexic', Arial, sans-serif !important;
+    text-shadow:
+       0 0 5px rgba(0,0,0,0.1),
+       0 0 10px rgba(0,0,0,0.1);
+  }
+  

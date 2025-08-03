@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background-color: #f3f8f5;
+    color: #2e4e3f;
+  }
+  
+  header {
+    background-color: #2e8b57;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 2rem;
+    color: #fff;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #d5eadf, #f7fdf9);
+    border-radius: 0 0 50px 50px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    color: #2e8b57;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    color: #444;
+  }
+  
+  footer {
+    background-color: #2e8b57;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  
