@@ -1,0 +1,126 @@
+@import './App.css';
+
+body {
+  background: #f3f8f5;
+  margin: 0;
+  font-family: 'Georgia', serif;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0 1.2rem 0;
+  background: none;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+  font-family: 'Brush Script MT', cursive;
+  font-size: 2.5rem;
+  color: #2e8b57;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2.2rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  color: #2e8b57;
+  text-decoration: none;
+  font-size: 1.13rem;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+nav a:hover,
+nav a.active {
+  background: #d5eadf;
+  color: #1c5c39;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem 2rem 2rem;
+  background: linear-gradient(135deg, #d5eadf 0%, #f7fdf9 100%);
+  border-radius: 24px;
+  box-shadow: 0 4px 16px rgba(46,139,87,0.07);
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: 2.7rem;
+  color: #2e8b57;
+  margin-bottom: 1.2rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+footer {
+  text-align: center;
+  padding: 1.2rem 0;
+  color: #fff;
+  background: #2e8b57;
+  border-radius: 12px;
+  margin-top: 2rem;
+  font-size: 1.05rem;
+  box-shadow: 0 -2px 8px rgba(46,139,87,0.08);
+}
