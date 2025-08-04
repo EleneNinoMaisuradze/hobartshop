@@ -6,10 +6,14 @@
   <title>პროდუქცია | HobArt</title>
   <link rel="stylesheet" href="product.css">
   <link rel="stylesheet" href="accessibility.css" />
-<script src="accessibility.js" defer></script>
-<button data-voice-text="Accessibility options ღილაკი">♿ Accessibility</button>
+  <script src="accessibility.js" defer></script>
 </head>
 <body>
+
+  <!-- Accessibility Button -->
+  <div class="accessibility-bar">
+    <button class="accessibility-btn" data-voice-text="Accessibility options ღილაკი" aria-label="შესაძლებლობები">♿ Accessibility</button>
+  </div>
 
   <header>
     <div class="logo">HobArt</div>
@@ -31,22 +35,32 @@
           <img src="images/candle.jpg" alt="სოიოს სანთლები">
           <h3>სოიოს სანთლები</h3>
           <p>ბუნებრივი, ეკო-მეგობრული და არომატული სანთლები.</p>
+          <div class="price">₾18</div>
+          <button type="button">დამატება კალათაში</button>
         </div>
         <div class="product-card">
           <img src="images/jewelry.jpg" alt="სამკაულები">
           <h3>სამკაულები</h3>
           <p>ხელით დამზადებული სამკაულები ებოქსიდით.</p>
+          <div class="price">₾25</div>
+          <button type="button">დამატება კალათაში</button>
         </div>
         <div class="product-card">
           <img src="images/toy.jpg" alt="ტექსტილის სათამაშოები">
           <h3>სათამაშოები</h3>
           <p>სითბოთი ნაკერი ტექსტილის სათამაშოები.</p>
+          <div class="price">₾30</div>
+          <button type="button">დამატება კალათაში</button>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
+    <div class="footer-links">
+      <a href="privacy.html">კონფიდენციალურობა</a> |
+      <a href="terms.html">წესები</a>
+    </div>
     <p>&copy; 2025 HobArt. ყველა უფლება დაცულია.</p>
   </footer>
 

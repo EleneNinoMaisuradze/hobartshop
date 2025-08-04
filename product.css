@@ -3,20 +3,24 @@ body {
     font-family: 'Georgia', serif;
     background-color: #fdfcfa;
     color: #333;
+    transition: background 0.3s, color 0.3s;
   }
   
   header {
     background-color: #8a7268;
-    padding: 1rem 2rem;
+    padding: 1.2rem 2.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 2px 8px rgba(138,114,104,0.10);
   }
   
   .logo {
     font-family: 'Brush Script MT', cursive;
     font-size: 2rem;
     color: #fff;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.08);
   }
   
   nav ul {
@@ -28,14 +32,30 @@ body {
   }
   
   nav a {
-    color: white;
+    color: #fff;
     text-decoration: none;
     font-size: 1.1rem;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+  }
+  nav a:hover,
+  nav a.active {
+    background: #f3e9da;
+    color: #8a7268;
   }
   
   .products {
     padding: 3rem 2rem;
     text-align: center;
+  }
+  
+  .products h2 {
+    color: #8a7268;
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    letter-spacing: 1px;
   }
   
   .product-grid {
@@ -52,22 +72,86 @@ body {
     padding: 1rem;
     border-radius: 20px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  
   .product-card:hover {
-    transform: scale(1.03);
+    transform: scale(1.04);
+    box-shadow: 0 8px 24px rgba(138,114,104,0.15);
   }
   
   .product-card img {
     width: 100%;
     border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  .product-card h3 {
+    font-size: 1.15rem;
+    color: #8a7268;
+    margin: 0.5rem 0;
+  }
+  
+  .product-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.7rem;
+  }
+  
+  .product-card .price {
+    font-weight: bold;
+    color: #6c4e36;
+    margin-bottom: 0.7rem;
+  }
+  
+  .product-card button {
+    padding: 0.7rem 1.2rem;
+    background-color: #8a7268;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.2s;
+  }
+  .product-card button:hover,
+  .product-card button:focus {
+    background-color: #6c4e36;
   }
   
   footer {
     background-color: #8a7268;
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 1.2rem 0;
+    font-size: 1.05rem;
+    box-shadow: 0 -2px 8px rgba(138,114,104,0.08);
   }
   
+  /* ხელმისაწვდომობის მხარდაჭერა */
+  .high-contrast {
+    background-color: #000 !important;
+    color: #ffeb3b !important;
+  }
+  .high-contrast header,
+  .high-contrast nav,
+  .high-contrast footer,
+  .high-contrast .products,
+  .high-contrast .product-card {
+    background-color: #000 !important;
+    color: #ffeb3b !important;
+  }
+  .high-contrast a,
+  .high-contrast .logo {
+    color: #ffeb3b !important;
+    background: #222 !important;
+  }
+  
+  /* დისპლექსიური შრიფტი */
+  .dyslexic-font {
+    font-family: 'OpenDyslexic', Arial, sans-serif !important;
+    text-shadow: 0 0 5px rgba(0,0,0,0.1);
+  }

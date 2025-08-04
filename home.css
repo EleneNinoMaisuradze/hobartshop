@@ -3,34 +3,47 @@ body {
     font-family: 'Georgia', serif;
     background-color: #f3f8f5;
     color: #2e4e3f;
+    transition: background 0.3s, color 0.3s;
   }
   
   header {
     background-color: #2e8b57;
-    padding: 1rem 2rem;
+    padding: 1.2rem 2.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 2px 8px rgba(46,139,87,0.10);
   }
   
   .logo {
     font-family: 'Brush Script MT', cursive;
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: #fff;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.08);
   }
   
   nav ul {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 2.2rem;
     padding: 0;
     margin: 0;
   }
   
   nav a {
-    color: white;
+    color: #fff;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.13rem;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+  }
+  nav a:hover,
+  nav a.active {
+    background: #d5eadf;
+    color: #2e8b57;
   }
   
   .hero {
@@ -38,22 +51,67 @@ body {
     padding: 4rem 2rem;
     background: linear-gradient(135deg, #d5eadf, #f7fdf9);
     border-radius: 0 0 50px 50px;
+    box-shadow: 0 4px 16px rgba(46,139,87,0.07);
   }
   
   .hero h1 {
     font-size: 2.5rem;
     color: #2e8b57;
+    margin-bottom: 1.2rem;
+    letter-spacing: 1px;
   }
   
   .hero p {
     font-size: 1.2rem;
     color: #444;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2.5rem;
+    background-color: #2e8b57;
+    color: #fff;
+    font-size: 1.05rem;
+  }
+  
+  .footer-links a {
+    color: #fff;
+    text-decoration: underline;
+    margin: 0 8px;
+    font-size: 1rem;
   }
   
   footer {
     background-color: #2e8b57;
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 0;
+    box-shadow: 0 -2px 8px rgba(46,139,87,0.08);
   }
   
+  /* ხელმისაწვდომობის მხარდაჭერა */
+  .high-contrast {
+    background-color: #000 !important;
+    color: #ffeb3b !important;
+  }
+  .high-contrast header,
+  .high-contrast nav,
+  .high-contrast footer,
+  .high-contrast .hero {
+    background-color: #000 !important;
+    color: #ffeb3b !important;
+  }
+  .high-contrast a,
+  .high-contrast .logo {
+    color: #ffeb3b !important;
+    background: #222 !important;
+  }
+  
+  /* დისპლექსიური შრიფტი */
+  .dyslexic-font {
+    font-family: 'OpenDyslexic', Arial, sans-serif !important;
+    text-shadow: 0 0 5px rgba(0,0,0,0.1);
+  }

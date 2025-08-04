@@ -6,10 +6,14 @@
   <title>კონტაქტი | HobArt</title>
   <link rel="stylesheet" href="contact.css">
   <link rel="stylesheet" href="accessibility.css" />
-<script src="accessibility.js" defer></script>
-<button data-voice-text="Accessibility options ღილაკი">♿ Accessibility</button>
+  <script src="accessibility.js" defer></script>
 </head>
 <body>
+
+  <!-- Accessibility Button -->
+  <div class="accessibility-bar">
+    <button class="accessibility-btn" data-voice-text="Accessibility options ღილაკი" aria-label="შესაძლებლობები">♿ Accessibility</button>
+  </div>
 
   <header>
     <div class="logo">HobArt</div>
@@ -43,6 +47,10 @@
 
   <footer>
     <p>&copy; 2025 HobArt. ყველა უფლება დაცულია.</p>
+    <div class="footer-links">
+      <a href="privacy.html">კონფიდენციალურობა</a> |
+      <a href="terms.html">წესები</a>
+    </div>
   </footer>
 
 </body>

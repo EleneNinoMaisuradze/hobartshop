@@ -1,110 +1,157 @@
+/* Accessibility Panel სტილი */
 #accessibilityPanel {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 230px;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 12px;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-    padding: 18px 22px;
-    font-family: 'Georgia', serif;
-    color: #2e8b57;
-    font-size: 14px;
-    user-select: none;
-    z-index: 10000;
-  }
-  
-  #accessibilityPanel h3 {
-    font-weight: 700;
-    font-size: 20px;
-    margin-bottom: 18px;
-  }
-  
-  #accessibilityPanel label {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 14px;
-    cursor: pointer;
-    font-weight: 500;
-  }
-  
-  #accessibilityPanel input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    accent-color: #2e8b57; /* თანამედროვე ბრაუზერებში ფერის შეცვლა */
-  }
-  
-  #accessibilityPanel input[type="range"] {
-    width: 100%;
-    cursor: pointer;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    height: 8px;
-    border-radius: 6px;
-    background: #d5eadf;
-    outline: none;
-    margin-top: 6px;
-    margin-bottom: 10px;
-  }
-  
-  #accessibilityPanel input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 22px;
-    height: 22px;
-    background: #2e8b57;
-    border-radius: 50%;
-    cursor: pointer;
-    border: none;
-    margin-top: -7px;
-    box-shadow: 0 0 6px rgba(46,139,87,0.7);
-    transition: background-color 0.3s ease;
-  }
-  
-  #accessibilityPanel input[type="range"]::-moz-range-thumb {
-    width: 22px;
-    height: 22px;
-    background: #2e8b57;
-    border-radius: 50%;
-    cursor: pointer;
-    border: none;
-    box-shadow: 0 0 6px rgba(46,139,87,0.7);
-    transition: background-color 0.3s ease;
-  }
-  
-  #accessibilityPanel input[type="range"]:hover::-webkit-slider-thumb {
-    background-color: #3a9b5a;
-  }
-  
-  #accessibilityPanel input[type="range"]:hover::-moz-range-thumb {
-    background-color: #3a9b5a;
-  }
-  
-  /* High contrast ფერები */
-  .high-contrast {
-    background-color: #000 !important;
-    color: #ffeb3b !important;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .high-contrast header,
-  .high-contrast nav,
-  .high-contrast main,
-  .high-contrast footer,
-  .high-contrast section {
-    background-color: #000 !important;
-    color: #ffeb3b !important;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  /* დისპლექსიური შრიფტი */
-  .dyslexic-font {
-    font-family: 'OpenDyslexic', Arial, sans-serif !important;
-    text-shadow:
-       0 0 5px rgba(0,0,0,0.1),
-       0 0 10px rgba(0,0,0,0.1);
-  }
-  
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 250px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+  padding: 22px 26px;
+  font-family: 'Georgia', serif;
+  color: #2e8b57;
+  font-size: 15px;
+  user-select: none;
+  z-index: 10000;
+  border: 1px solid #e0e0e0;
+}
+
+#accessibilityPanel h3 {
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #2e8b57;
+}
+
+#accessibilityPanel label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+#accessibilityPanel input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  accent-color: #2e8b57;
+}
+
+#accessibilityPanel input[type="range"] {
+  width: 100%;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 10px;
+  border-radius: 8px;
+  background: #d5eadf;
+  outline: none;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+#accessibilityPanel input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  background: #2e8b57;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  margin-top: -7px;
+  box-shadow: 0 0 8px rgba(46,139,87,0.7);
+  transition: background-color 0.3s ease;
+}
+
+#accessibilityPanel input[type="range"]::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background: #2e8b57;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 8px rgba(46,139,87,0.7);
+  transition: background-color 0.3s ease;
+}
+
+#accessibilityPanel input[type="range"]:hover::-webkit-slider-thumb {
+  background-color: #3a9b5a;
+}
+
+#accessibilityPanel input[type="range"]:hover::-moz-range-thumb {
+  background-color: #3a9b5a;
+}
+
+/* Accessibility ღილაკი */
+.accessibility-bar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 32px;
+  background: #f6f6f6;
+}
+
+.accessibility-btn {
+  font-size: 1.2rem;
+  background: #e0e0e0;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #2e8b57;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.accessibility-btn:focus,
+.accessibility-btn:hover {
+  background: #d5eadf;
+  outline: 2px solid #2e8b57;
+}
+
+/* High contrast ფერები */
+.high-contrast {
+  background-color: #000 !important;
+  color: #ffeb3b !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.high-contrast header,
+.high-contrast nav,
+.high-contrast main,
+.high-contrast footer,
+.high-contrast section {
+  background-color: #000 !important;
+  color: #ffeb3b !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.high-contrast a,
+.high-contrast .accessibility-btn {
+  color: #ffeb3b !important;
+  background: #222 !important;
+  border-color: #ffeb3b !important;
+}
+
+/* დისპლექსიური შრიფტი */
+.dyslexic-font {
+  font-family: 'OpenDyslexic', Arial, sans-serif !important;
+  text-shadow:
+     0 0 5px rgba(0,0,0,0.1),
+     0 0 10px rgba(0,0,0,0.1);
+}
+
+/* დამატებითი ხელმისაწვდომობის სტილები */
+#accessibilityPanel button,
+#accessibilityPanel input,
+#accessibilityPanel label {
+  outline: none;
+}
+
+#accessibilityPanel button:focus,
+#accessibilityPanel input:focus {
+  outline: 2px solid #2e8b57;
+  outline-offset: 2px;
+}
