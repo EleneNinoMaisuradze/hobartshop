@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ka">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ჩვენს შესახებ | HobArt</title>
-  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="about.css" />
   <link rel="stylesheet" href="accessibility.css" />
   <script src="accessibility.js" defer></script>
 </head>
@@ -12,34 +12,46 @@
 
   <!-- Accessibility Button -->
   <div class="accessibility-bar">
-    <button class="accessibility-btn" data-voice-text="Accessibility options ღილაკი" aria-label="შესაძლებლობები">♿ Accessibility</button>
+    <button 
+      class="accessibility-btn" 
+      data-voice-text="Accessibility options ღილაკი" 
+      aria-label="შესაძლებლობები" 
+      aria-expanded="false" 
+      aria-controls="accessibilityPanel"
+      id="contrastToggleButton"
+    >
+      ♿ Accessibility
+    </button>
   </div>
 
   <header>
     <div class="logo">HobArt</div>
-    <nav>
+    <nav aria-label="მთავარი ნავიგაცია">
       <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="product.html">Product</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="home.html">მთავარი</a></li>
+        <li><a href="about.html" class="active" aria-current="page">ჩვენს შესახებ</a></li>
+        <li><a href="product.html">პროდუქცია</a></li>
+        <li><a href="contact.html">კონტაქტი</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="about">
-      <h2>ჩვენს შესახებ</h2>
-      <p>HobArt შეიქმნა 2020 წელს. ჩვენი მისიაა თითოეულ პროდუქტში ჩავდოთ სითბო, სილამაზე და ბუნებრივი სტილი. ჩვენ გვჯერა რომ ხელნაკეთი ნივთი ატარებს ემოციას და სილამაზეს.</p>
+    <section class="about" aria-labelledby="aboutTitle" tabindex="-1">
+      <h2 id="aboutTitle">ჩვენს შესახებ</h2>
+      <p>
+        HobArt შეიქმნა 2020 წელს. ჩვენი მისიაა თითოეულ პროდუქტში ჩავდოთ სითბო, სილამაზე და ბუნებრივი სტილი.
+        ჩვენ გვჯერა, რომ ხელნაკეთი ნივთი ატარებს ემოციას და სილამაზეს.
+      </p>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 HobArt. ყველა უფლება დაცულია.</p>
-    <div class="footer-links">
+    <nav aria-label="ფუტერის მენიუ" class="footer-links">
       <a href="privacy.html">კონფიდენციალურობა</a> |
       <a href="terms.html">წესები</a>
-    </div>
+    </nav>
   </footer>
 
 </body>

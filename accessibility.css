@@ -3,7 +3,7 @@
   position: fixed;
   bottom: 24px;
   right: 24px;
-  width: 250px;
+  width: 280px;
   background: #fff;
   border-radius: 14px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.18);
@@ -14,6 +14,18 @@
   user-select: none;
   z-index: 10000;
   border: 1px solid #e0e0e0;
+
+  /* ტრანზიცია */
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#accessibilityPanel.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 #accessibilityPanel h3 {
@@ -30,6 +42,7 @@
   margin-bottom: 16px;
   cursor: pointer;
   font-weight: 500;
+  user-select: none;
 }
 
 #accessibilityPanel input[type="checkbox"] {
@@ -37,6 +50,7 @@
   height: 22px;
   cursor: pointer;
   accent-color: #2e8b57;
+  flex-shrink: 0;
 }
 
 #accessibilityPanel input[type="range"] {
@@ -51,6 +65,12 @@
   outline: none;
   margin-top: 8px;
   margin-bottom: 12px;
+  transition: background-color 0.3s ease;
+}
+
+#accessibilityPanel input[type="range"]:focus {
+  outline: 2px solid #2e8b57;
+  outline-offset: 2px;
 }
 
 #accessibilityPanel input[type="range"]::-webkit-slider-thumb {
@@ -78,11 +98,13 @@
   transition: background-color 0.3s ease;
 }
 
-#accessibilityPanel input[type="range"]:hover::-webkit-slider-thumb {
+#accessibilityPanel input[type="range"]:hover::-webkit-slider-thumb,
+#accessibilityPanel input[type="range"]:focus::-webkit-slider-thumb {
   background-color: #3a9b5a;
 }
 
-#accessibilityPanel input[type="range"]:hover::-moz-range-thumb {
+#accessibilityPanel input[type="range"]:hover::-moz-range-thumb,
+#accessibilityPanel input[type="range"]:focus::-moz-range-thumb {
   background-color: #3a9b5a;
 }
 
@@ -103,12 +125,16 @@
   cursor: pointer;
   color: #2e8b57;
   font-weight: 600;
-  transition: background 0.2s;
+  transition: background 0.2s, box-shadow 0.3s;
+  box-shadow: none;
 }
+
 .accessibility-btn:focus,
 .accessibility-btn:hover {
   background: #d5eadf;
   outline: 2px solid #2e8b57;
+  outline-offset: 2px;
+  box-shadow: 0 0 8px #2e8b57aa;
 }
 
 /* High contrast ფერები */
@@ -154,4 +180,14 @@
 #accessibilityPanel input:focus {
   outline: 2px solid #2e8b57;
   outline-offset: 2px;
+}
+
+/* Responsive - მობილური */
+@media (max-width: 480px) {
+  #accessibilityPanel {
+    width: 90vw;
+    right: 5vw;
+    bottom: 20px;
+    padding: 16px 20px;
+  }
 }

@@ -1,97 +1,105 @@
 body {
-    margin: 0;
-    font-family: 'Georgia', serif;
-    background-color: #fffaf3;
-    color: #4e463c;
-    transition: background 0.3s, color 0.3s;
-  }
-  
-  header {
-    background-color: #bca38b;
-    padding: 1.2rem 2.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 8px rgba(188,163,139,0.15);
-  }
-  
-  .logo {
-    font-family: 'Brush Script MT', cursive;
-    font-size: 2.3rem;
-    color: #fff;
-    letter-spacing: 2px;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 2.2rem;
-    padding: 0;
-    margin: 0;
-  }
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.13rem;
-    font-weight: 500;
-    padding: 6px 14px;
-    border-radius: 6px;
-    transition: background 0.2s, color 0.2s;
-  }
-  nav a:hover,
-  nav a.active {
-    background: #f3e9da;
-    color: #6c4e36;
-  }
-  
-  .about {
-    max-width: 820px;
-    margin: 3.5rem auto;
-    padding: 2.2rem;
-    background-color: #f3e9da;
-    border-radius: 22px;
-    box-shadow: 0 4px 16px rgba(188,163,139,0.13);
-    line-height: 1.7;
-  }
-  
-  .about h2 {
-    color: #6c4e36;
-    font-size: 2rem;
-    margin-bottom: 1.2rem;
-    letter-spacing: 1px;
-  }
-  
-  footer {
-    background-color: #bca38b;
-    color: #fff;
-    text-align: center;
-    padding: 1.2rem 0;
-    font-size: 1.05rem;
-    box-shadow: 0 -2px 8px rgba(188,163,139,0.10);
-  }
-  
-  /* ხელმისაწვდომობის მხარდაჭერა */
-  .high-contrast {
-    background-color: #000 !important;
-    color: #ffeb3b !important;
-  }
-  .high-contrast header,
-  .high-contrast nav,
-  .high-contrast footer,
-  .high-contrast .about {
-    background-color: #000 !important;
-    color: #ffeb3b !important;
-  }
-  .high-contrast a,
-  .high-contrast .logo {
-    color: #ffeb3b !important;
-    background: #222 !important;
-  }
-  
-  /* დისპლექსიური შრიფტი */
-  .dyslexic-font {
-    font-family: 'OpenDyslexic', Arial, sans-serif !important;
-    text-shadow: 0 0 5px rgba(0,0,0,0.1);
-  }
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background-color: #fffaf3;
+  color: #4e463c;
+  transition: background 0.3s, color 0.3s;
+  line-height: 1.6; /* თხელი ხაზების ზომა უფრო კომფორტული წასაკითხად */
+}
+
+header {
+  background-color: #bca38b;
+  padding: 1.2rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(188,163,139,0.15);
+}
+
+.logo {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 2.3rem;
+  color: #fff;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  user-select: none; /* მომხმარებელს არ შეუძლია ტექსტის ამორჩევა ლოგოზე */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2.2rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.13rem;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+  user-select: none; /* ლინკებზე არ ირჩევოდეს ტექსტი */
+}
+nav a:hover,
+nav a.active {
+  background: #f3e9da;
+  color: #6c4e36;
+}
+
+.about {
+  max-width: 820px;
+  margin: 3.5rem auto;
+  padding: 2.2rem 2.5rem;
+  background-color: #f3e9da;
+  border-radius: 22px;
+  box-shadow: 0 4px 16px rgba(188,163,139,0.13);
+  line-height: 1.7;
+  font-size: 1.1rem; /* უკეთესი წაკითხვადობა */
+  color: #4e463c;
+}
+
+.about h2 {
+  color: #6c4e36;
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  letter-spacing: 1px;
+}
+
+footer {
+  background-color: #bca38b;
+  color: #fff;
+  text-align: center;
+  padding: 1.2rem 0;
+  font-size: 1.05rem;
+  box-shadow: 0 -2px 8px rgba(188,163,139,0.10);
+  user-select: none;
+}
+
+/* Accessibility */
+.high-contrast {
+  background-color: #000 !important;
+  color: #ffeb3b !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.high-contrast header,
+.high-contrast nav,
+.high-contrast footer,
+.high-contrast .about {
+  background-color: #000 !important;
+  color: #ffeb3b !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.high-contrast a,
+.high-contrast .logo {
+  color: #ffeb3b !important;
+  background: #222 !important;
+}
+
+/* Dyslexic font */
+.dyslexic-font {
+  font-family: 'OpenDyslexic', Arial, sans-serif !important;
+  text-shadow: 0 0 5px rgba(0,0,0,0.1);
+}

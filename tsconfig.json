@@ -1,40 +1,13 @@
 {
-  // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
-    // File Layout
-    "rootDir": "./src",
-    "outDir": "./dist",
-
-    // Environment Settings
-    // See also https://aka.ms/tsconfig/module
-    "module": "esnext",
-    "target": "es6",
-    "types": [],
-    // For nodejs:
-    // "lib": ["esnext"],
-    // "types": ["node"],
-    // and npm install -D @types/node
-
-    // Other Outputs
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
-
-    // Stricter Typechecking Options
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
-
-    // Style Options
-    // "noImplicitReturns": true,
-    // "noImplicitOverride": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
-    // "noFallthroughCasesInSwitch": true,
-    // "noPropertyAccessFromIndexSignature": true,
-
-    // Recommended Options
-    "strict": true,
-    "skipLibCheck": true
+    "target": "es6",                          // თანამედროვე JavaScript ვერსია
+    "module": "esnext",                       // ES მოდულები
+    "jsx": "react-jsx",                       // JSX-ის მხარდაჭერა (React 17+)
+    "strict": true,                           // მკაცრი ტაიპჩეკი
+    "esModuleInterop": true,                  // მოდულების კარგი თავსებადობა
+    "allowSyntheticDefaultImports": true,    // Default იმპორტების მხარდაჭერა
+    "skipLibCheck": true,                     // ლაიბრერიის ტაიპების გადახედვის გამოტოვება
+    "forceConsistentCasingInFileNames": true // ფაილების სახელების მუდმივი დიდი/პატარა ასოების კონტროლი
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*"]                     // ჩართე ყველა TypeScript და JSX ფაილი src ფოლდერში
 }

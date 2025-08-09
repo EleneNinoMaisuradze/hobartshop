@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ka">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>კონტაქტი | HobArt</title>
-  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="contact.css" />
   <link rel="stylesheet" href="accessibility.css" />
   <script src="accessibility.js" defer></script>
 </head>
@@ -12,17 +12,17 @@
 
   <!-- Accessibility Button -->
   <div class="accessibility-bar">
-    <button class="accessibility-btn" data-voice-text="Accessibility options ღილაკი" aria-label="შესაძლებლობები">♿ Accessibility</button>
+    <button class="accessibility-btn" data-voice-text="Accessibility options ღილაკი" aria-label="ხელმისაწვდომობის პარამეტრები">♿ Accessibility</button>
   </div>
 
   <header>
-    <div class="logo">HobArt</div>
+    <a href="home.html" class="logo">HobArt</a>
     <nav>
       <ul>
         <li><a href="home.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="product.html">Product</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -32,10 +32,10 @@
       <h2>დაგვიკავშირდით</h2>
       <form>
         <label for="name">სახელი:</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" name="name" required />
 
         <label for="email">ელ.ფოსტა:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" required />
 
         <label for="message">შეტყობინება:</label>
         <textarea id="message" name="message" required></textarea>
