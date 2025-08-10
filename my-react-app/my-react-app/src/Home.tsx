@@ -1,8 +1,14 @@
-function Home() {
+import React from 'react';
+
+const Home: React.FC = () => {
   return (
-    <div>
-      <h1>მთავარი გვერდი</h1>
-    </div>
+      <section aria-labelledby="welcomeTitle">
+        <h2 id="welcomeTitle">მოგესალმებით HobArt-ში</h2>
+        <p>HobArt - მაღალი ხარისხის ხელნაკეთი დეკორატიული ნივთები და საჩუქრები.</p>
+        <p>ჩვენი პროდუქცია შექმნილია სითბოთი და სიყვარულით, რათა თქვენი სახლი განსაკუთრებული გახდეს.</p>
+      </section>
+   
   );
-}
+};
+
 export default Home;

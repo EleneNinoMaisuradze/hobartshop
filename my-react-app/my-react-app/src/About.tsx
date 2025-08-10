@@ -1,8 +1,11 @@
-function About() {
+import React from 'react';
+
+const About: React.FC = () => {
   return (
-    <div>
-      <h1>ჩვენს შესახებ</h1>
-    </div>
+    <main>
+      {/* აქ შეგიძლია შენი მთავარი შინაარსი ჩასვა */}
+    </main>
   );
-}
+};
+
 export default About;

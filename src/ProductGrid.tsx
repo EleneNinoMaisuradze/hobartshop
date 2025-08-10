@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ProductGrid from '../src/ProductGrid ;
+import ProductGrid from './ProductGrid'
 
 const productsData = [
   {
@@ -28,7 +28,8 @@ const productsData = [
   },
 ];
 
-const App: React.FC = () => {
+
+const App = () => {
   const [cart, setCart] = useState<number[]>([]);
 
   const handleAddToCart = (productId: number) => {
@@ -36,7 +37,9 @@ const App: React.FC = () => {
     alert(`პროდუქტი დამატებულია კალათაში (ID: ${productId})`);
   };
 
-  return <ProductGrid products={productsData} onAddToCart={handleAddToCart} />;
+  return (
+    <ProductGrid products={productsData} onAddToCart={handleAddToCart} />
+  );
 };
 
 export default App;

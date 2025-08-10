@@ -9,5 +9,5 @@
     "skipLibCheck": true,                     // ლაიბრერიის ტაიპების გადახედვის გამოტოვება
     "forceConsistentCasingInFileNames": true // ფაილების სახელების მუდმივი დიდი/პატარა ასოების კონტროლი
   },
-  "include": ["src/**/*"]                     // ჩართე ყველა TypeScript და JSX ფაილი src ფოლდერში
+  "include": ["src/**/*", "component"]                     // ჩართე ყველა TypeScript და JSX ფაილი src ფოლდერში
 }
