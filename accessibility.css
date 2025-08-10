@@ -1,193 +1,73 @@
-/* Accessibility Panel სტილი */
+/* 1. #accessibilityPanel-ის მოსწორება გადაფარვის თავიდან ასაცილებლად */
 #accessibilityPanel {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  width: 280px;
-  background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
-  padding: 22px 26px;
-  font-family: 'Georgia', serif;
-  color: #2e8b57;
+  max-width: 320px; /* ცოტათი გაზარდე, უფრო მეტი სივრცე ელემენტებისთვის */
   font-size: 15px;
-  user-select: none;
+  /* დაემატება მცირე padding */
+  padding: 24px 28px;
+  /* დაამატე subtle background gradient */
+  background: linear-gradient(145deg, #ffffff, #e6f2ea);
+  /* ზ-index შენარჩუნება */
   z-index: 10000;
-  border: 1px solid #e0e0e0;
-
-  /* ტრანზიცია */
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-#accessibilityPanel.show {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
-}
-
-#accessibilityPanel h3 {
+/* 2. Accessibility ღილაკს დააკავშირე თანმიმდევრული სტილი */
+.accessibility-btn {
+  font-size: 1.3rem;
   font-weight: 700;
-  font-size: 22px;
-  margin-bottom: 20px;
-  color: #2e8b57;
+  background: #2e8b57; /* ძირითადი ფერი */
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(46,139,87,0.4);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
-
-#accessibilityPanel label {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
+.accessibility-btn:hover,
+.accessibility-btn:focus {
+  background: #246a44; /* წვერისფერ ზემოქმედება */
+  box-shadow: 0 0 15px #246a44aa;
+  outline: none;
   cursor: pointer;
-  font-weight: 500;
-  user-select: none;
 }
 
+/* 3. Checkbox და Range input-ის ხელახლა მორგება */
 #accessibilityPanel input[type="checkbox"] {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   cursor: pointer;
   accent-color: #2e8b57;
-  flex-shrink: 0;
+  transition: box-shadow 0.3s ease;
+}
+#accessibilityPanel input[type="checkbox"]:focus {
+  outline: none;
+  box-shadow: 0 0 8px #2e8b57cc;
 }
 
+/* 4. Range input background-gradient და უფრო დახვეწილი სლაიდერი */
 #accessibilityPanel input[type="range"] {
-  width: 100%;
-  cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  background: linear-gradient(90deg, #2e8b57 0%, #92bfc2 100%);
+}
+#accessibilityPanel input[type="range"]::-webkit-slider-runnable-track {
   height: 10px;
   border-radius: 8px;
-  background: #d5eadf;
-  outline: none;
-  margin-top: 8px;
-  margin-bottom: 12px;
-  transition: background-color 0.3s ease;
 }
-
-#accessibilityPanel input[type="range"]:focus {
-  outline: 2px solid #2e8b57;
-  outline-offset: 2px;
-}
-
-#accessibilityPanel input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 24px;
-  height: 24px;
-  background: #2e8b57;
-  border-radius: 50%;
-  cursor: pointer;
-  border: none;
-  margin-top: -7px;
-  box-shadow: 0 0 8px rgba(46,139,87,0.7);
-  transition: background-color 0.3s ease;
-}
-
-#accessibilityPanel input[type="range"]::-moz-range-thumb {
-  width: 24px;
-  height: 24px;
-  background: #2e8b57;
-  border-radius: 50%;
-  cursor: pointer;
-  border: none;
-  box-shadow: 0 0 8px rgba(46,139,87,0.7);
-  transition: background-color 0.3s ease;
-}
-
-#accessibilityPanel input[type="range"]:hover::-webkit-slider-thumb,
-#accessibilityPanel input[type="range"]:focus::-webkit-slider-thumb {
-  background-color: #3a9b5a;
-}
-
-#accessibilityPanel input[type="range"]:hover::-moz-range-thumb,
-#accessibilityPanel input[type="range"]:focus::-moz-range-thumb {
-  background-color: #3a9b5a;
-}
-
-/* Accessibility ღილაკი */
-.accessibility-bar {
-  display: flex;
-  justify-content: flex-end;
-  padding: 10px 32px;
-  background: #f6f6f6;
-}
-
-.accessibility-btn {
-  font-size: 1.2rem;
-  background: #e0e0e0;
-  border: none;
-  padding: 10px 18px;
+#accessibilityPanel input[type="range"]::-moz-range-track {
+  height: 10px;
   border-radius: 8px;
-  cursor: pointer;
-  color: #2e8b57;
-  font-weight: 600;
-  transition: background 0.2s, box-shadow 0.3s;
-  box-shadow: none;
 }
 
-.accessibility-btn:focus,
-.accessibility-btn:hover {
-  background: #d5eadf;
-  outline: 2px solid #2e8b57;
-  outline-offset: 2px;
-  box-shadow: 0 0 8px #2e8b57aa;
-}
-
-/* High contrast ფერები */
-.high-contrast {
-  background-color: #000 !important;
-  color: #ffeb3b !important;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.high-contrast header,
-.high-contrast nav,
-.high-contrast main,
-.high-contrast footer,
-.high-contrast section {
-  background-color: #000 !important;
-  color: #ffeb3b !important;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.high-contrast a,
-.high-contrast .accessibility-btn {
-  color: #ffeb3b !important;
-  background: #222 !important;
-  border-color: #ffeb3b !important;
-}
-
-/* დისპლექსიური შრიფტი */
-.dyslexic-font {
-  font-family: 'OpenDyslexic', Arial, sans-serif !important;
-  text-shadow:
-     0 0 5px rgba(0,0,0,0.1),
-     0 0 10px rgba(0,0,0,0.1);
-}
-
-/* დამატებითი ხელმისაწვდომობის სტილები */
-#accessibilityPanel button,
-#accessibilityPanel input,
-#accessibilityPanel label {
-  outline: none;
-}
-
-#accessibilityPanel button:focus,
-#accessibilityPanel input:focus {
-  outline: 2px solid #2e8b57;
-  outline-offset: 2px;
-}
-
-/* Responsive - მობილური */
+/* 5. Responsive */
 @media (max-width: 480px) {
   #accessibilityPanel {
-    width: 90vw;
-    right: 5vw;
-    bottom: 20px;
-    padding: 16px 20px;
+    width: 95vw;
+    right: 2.5vw;
+    bottom: 16px;
+    padding: 20px 24px;
   }
+}
+
+/* 6. დამატებითი სასარგებლო წვრილმანები */
+#accessibilityPanel label {
+  user-select: none;
+  gap: 12px;
 }

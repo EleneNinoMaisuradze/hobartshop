@@ -2,59 +2,105 @@
 <html lang="ka">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>პროდუქცია | HobArt</title>
-  <meta name="description" content="HobArt - ხელნაკეთი სანთლები, აქსესუარები და ტექსტილის სათამაშოები." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HobArt | პროდუქცია</title>
   <link rel="stylesheet" href="product.css" />
-  <link rel="stylesheet" href="accessibility.css" />
   <script src="accessibility.js" defer></script>
 </head>
 <body>
 
-  <!-- Accessibility Button -->
   <div class="accessibility-bar">
-    <button
-      class="accessibility-btn"
-      data-voice-text="Accessibility options ღილაკი"
-      aria-label="ხელმისაწვდომობის პარამეტრები"
+    <button 
+      class="accessibility-btn" 
+      aria-label="Accessibility options"
+      aria-expanded="false"
+      aria-controls="accessibilityPanel"
+      id="accessibilityToggleBtn"
     >♿ Accessibility</button>
   </div>
 
   <header>
-    <div class="logo"><a href="home.html">HobArt</a></div>
-    <nav>
-      <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="product.html" class="active" aria-current="page">Product</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <div class="logo">HobArt</div>
+    <nav aria-label="მთავარი ნავიგაცია">
+  <ul>
+    <li><a href="home.html">მთავარი</a></li>
+    <li class="dropdown">
+      <button 
+        class="dropdown-btn" 
+        aria-expanded="false" 
+        aria-haspopup="true" 
+        aria-controls="productSubmenu"
+        type="button"
+      >
+        პროდუქცია ▼
+      </button>
+      <ul id="productSubmenu" class="submenu" hidden>
+        <li><a href="decorative-candles.html">დეკორატიული სანთლები</a></li>
+        <li><a href="holiday-candles.html">საახალწლო სანთლები</a></li>
+        <li><a href="epoxy.html">ეპოქსი (Epoxy)</a></li>
+        <li><a href="teak-toys.html">ტეკის სათამაშოები (Teak Toys)</a></li>
+        <li><a href="holiday-items.html">საახალწლო ნივთები</a></li>
+        <li><a href="womens-accessories.html">ქალის აქსესუარები</a></li>
       </ul>
-    </nav>
-  </header>
+    <li><a href="about.html">ჩვენს შესახებ</a></li>
+    <li><a href="contact.html">კონტაქტი</a></li>
+  </ul>
+</nav>
 
-  <main>
-    <section class="products">
-      <h2>პროდუქცია</h2>
-      <div class="product-grid">
-        <div class="product-card">
-          <img src="images/candle.jpg" alt="სოიოს სანთლები" />
-          <h3>სოიოს სანთლები</h3>
-          <p>ბუნებრივი, ეკო-მეგობრული და არომატული სანთლები.</p>
-          <div class="price">₾18</div>
-          <button type="button">დამატება კალათაში</button>
-        </div>
-        <div class="product-card">
-          <img src="images/jewelry.jpg" alt="სამკაულები" />
-          <h3>სამკაულები</h3>
-          <p>ხელით დამზადებული სამკაულები ებოქსიდით.</p>
-          <div class="price">₾25</div>
-          <button type="button">დამატება კალათაში</button>
-        </div>
-        <div class="product-card">
-          <img src="images/toy.jpg" alt="ტექსტილის სათამაშოები" />
-          <h3>სათამაშოები</h3>
-          <p>სითბოთი ნაკერი ტექსტილის სათამაშოები.</p>
-          <div class="price">₾30</div>
-          <button type="button">დამატება კალათაში</button>
-        </div>
-      </div>
+  </header>
+  <main tabindex="-1">
+    <section aria-labelledby="productCategoriesTitle">
+      <h2 id="productCategoriesTitle">პროდუქციის კატეგორიები</h2>
+      <ul class="product-categories">
+        <li>
+          <button 
+            class="dropdown-btn" 
+            aria-expanded="false" 
+            aria-controls="candlesSubmenu" 
+            aria-haspopup="true"
+            type="button"
+          >
+            სანთლები ▼
+          </button>
+          <ul id="candlesSubmenu" class="submenu" hidden>
+            <li><a href="decorative-candles.html">დეკორატიული სანთლები</a></li>
+            <li><a href="holiday-candles.html">საახალწლო სანთლები</a></li>
+          </ul>
+        </li>
+        <li><a href="epoxy.html">ეპოქსი (Epoxy)</a></li>
+        <li><a href="teak-toys.html">ტეკის სათამაშოები (Teak Toys)</a></li>
+        <li><a href="holiday-items.html">საახალწლო ნივთები</a></li>
+        <li><a href="womens-accessories.html">ქალის აქსესუარები</a></li>
+      </ul>
+
+      <section aria-labelledby="servicesTitle" style="margin-top: 2rem;">
+        <h2 id="servicesTitle">მომსახურებები</h2>
+        <ul>
+          <li>მაღალი ხარისხი</li>
+          <li>კურიერის სერვისი</li>
+          <li>უსაფრთხო გადახდის სერვისი</li>
+          <li>კვალიფიციური კონსულტაცია</li>
+        </ul>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 HobArt. ყველა უფლება დაცულია.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.dropdown-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const submenuId = button.getAttribute('aria-controls');
+        const submenu = document.getElementById(submenuId);
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+        submenu.hidden = isExpanded;
+        button.setAttribute('aria-expanded', !isExpanded);
+      });
+    });
+  </script>
+
+</body>
+</html>

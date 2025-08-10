@@ -3,26 +3,28 @@ body {
   font-family: 'Georgia', serif;
   background-color: #fffaf3;
   color: #4e463c;
+  line-height: 1.6;
+  font-size: 16px;
   transition: background 0.3s, color 0.3s;
-  line-height: 1.6; /* თხელი ხაზების ზომა უფრო კომფორტული წასაკითხად */
 }
 
 header {
-  background-color: #bca38b;
+  background-color: #2e8b57;
   padding: 1.2rem 2.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 8px rgba(188,163,139,0.15);
+  box-shadow: 0 2px 8px rgba(46,139,87,0.10);
+  color: #fff;
+  user-select: none;
 }
 
 .logo {
   font-family: 'Brush Script MT', cursive;
   font-size: 2.3rem;
-  color: #fff;
   letter-spacing: 2px;
   text-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  user-select: none; /* მომხმარებელს არ შეუძლია ტექსტის ამორჩევა ლოგოზე */
+  user-select: none;
 }
 
 nav ul {
@@ -33,6 +35,43 @@ nav ul {
   margin: 0;
 }
 
+/* Dropdown menu styles */
+nav ul li {
+  position: relative;
+}
+
+nav ul li ul {
+  display: none; /* თავდაპირველად არ ჩანს */
+  position: absolute;
+  background: #2e8b57;
+  top: 100%; /* პირდაპირ ქვემოთ */
+  left: 0;
+  padding: 0.5rem 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  min-width: 180px;
+  z-index: 1000;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li {
+  display: block;
+}
+
+nav ul li ul li a {
+  display: block;
+  padding: 8px 16px;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li ul li a:hover {
+  background-color: #3a9b5a;
+}
+
 nav a {
   color: #fff;
   text-decoration: none;
@@ -41,7 +80,7 @@ nav a {
   padding: 6px 14px;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
-  user-select: none; /* ლინკებზე არ ირჩევოდეს ტექსტი */
+  user-select: none;
 }
 nav a:hover,
 nav a.active {
@@ -57,7 +96,7 @@ nav a.active {
   border-radius: 22px;
   box-shadow: 0 4px 16px rgba(188,163,139,0.13);
   line-height: 1.7;
-  font-size: 1.1rem; /* უკეთესი წაკითხვადობა */
+  font-size: 1.1rem;
   color: #4e463c;
 }
 
@@ -69,12 +108,12 @@ nav a.active {
 }
 
 footer {
-  background-color: #bca38b;
+  background-color: #2e8b57;
   color: #fff;
   text-align: center;
   padding: 1.2rem 0;
   font-size: 1.05rem;
-  box-shadow: 0 -2px 8px rgba(188,163,139,0.10);
+  box-shadow: 0 -2px 8px rgba(46,139,87,0.08);
   user-select: none;
 }
 
@@ -82,7 +121,6 @@ footer {
 .high-contrast {
   background-color: #000 !important;
   color: #ffeb3b !important;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 .high-contrast header,
 .high-contrast nav,
@@ -90,7 +128,6 @@ footer {
 .high-contrast .about {
   background-color: #000 !important;
   color: #ffeb3b !important;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 .high-contrast a,
 .high-contrast .logo {

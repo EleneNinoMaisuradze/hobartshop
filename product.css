@@ -1,137 +1,126 @@
 body {
   margin: 0;
   font-family: 'Georgia', serif;
-  background-color: #fdfcfa;
-  color: #333;
-  transition: background 0.3s, color 0.3s;
+  background-color: #f9fcfd;
+  color: #4e4e4e;
+  line-height: 1.6;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 header {
-  background-color: #8a7268;
-  padding: 1.2rem 2.5rem;
+  background-color: #2e8b57;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 8px rgba(138,114,104,0.10);
+  color: #fff;
+  user-select: none;
 }
 
 .logo {
   font-family: 'Brush Script MT', cursive;
-  font-size: 2rem;
-  color: #fff;
-  letter-spacing: 2px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-size: 2.5rem;
+  letter-spacing: 3px;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   gap: 2rem;
-  padding: 0;
   margin: 0;
+  padding: 0;
+}
+
+/* Dropdown menu styles */
+nav ul li {
+  position: relative;
+}
+
+nav ul li ul {
+  display: none; /* თავდაპირველად არ ჩანს */
+  position: absolute;
+  background: #2e8b57;
+  top: 100%; /* პირდაპირ ქვემოთ */
+  left: 0;
+  padding: 0.5rem 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  min-width: 180px;
+  z-index: 1000;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li {
+  display: block;
+}
+
+nav ul li ul li a {
+  display: block;
+  padding: 8px 16px;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li ul li a:hover {
+  background-color: #3a9b5a;
 }
 
 nav a {
   color: #fff;
   text-decoration: none;
+  font-weight: 600;
   font-size: 1.1rem;
-  font-weight: 500;
-  padding: 6px 14px;
+  padding: 6px 12px;
   border-radius: 6px;
-  transition: background 0.2s, color 0.2s;
+  transition: background-color 0.3s ease;
 }
+
 nav a:hover,
-nav a.active {
-  background: #f3e9da;
-  color: #8a7268;
+nav a.active,
+nav a:focus-visible {
+  background-color: #70a8a9;
+  outline: none;
+  box-shadow: 0 0 0 3px #4a8a8a;
 }
 
-.products {
-  padding: 3rem 2rem;
-  text-align: center;
+main {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1rem;
 }
 
-.products h2 {
-  color: #8a7268;
-  font-size: 2rem;
-  margin-bottom: 1.2rem;
-  letter-spacing: 1px;
+section {
+  margin-bottom: 3rem;
 }
 
-.product-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-.product-card {
-  background-color: #fff;
-  width: 250px;
-  padding: 1rem;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.product-card:hover {
-  transform: scale(1.04);
-  box-shadow: 0 8px 24px rgba(138,114,104,0.15);
-}
-
-.product-card img {
-  width: 100%;
-  border-radius: 10px;
+h2 {
+  color: #2f6f70;
   margin-bottom: 1rem;
+  border-bottom: 2px solid #92BFC2;
+  padding-bottom: 0.3rem;
 }
 
-.product-card h3 {
-  font-size: 1.15rem;
-  color: #8a7268;
-  margin: 0.5rem 0;
-}
-
-.product-card p {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 0.7rem;
-}
-
-.product-card .price {
-  font-weight: bold;
-  color: #6c4e36;
-  margin-bottom: 0.7rem;
-}
-
-.product-card button {
-  padding: 0.7rem 1.2rem;
-  background-color: #8a7268;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 500;
-  transition: background 0.2s;
-}
-.product-card button:hover,
-.product-card button:focus {
-  background-color: #6c4e36;
+ul.product-categories {
+  list-style: disc inside;
+  font-size: 1.1rem;
+  color: #4e4e4e;
 }
 
 footer {
-  background-color: #8a7268;
+  background-color: #2e8b57;
   color: white;
   text-align: center;
-  padding: 1.2rem 0;
-  font-size: 1.05rem;
-  box-shadow: 0 -2px 8px rgba(138,114,104,0.08);
+  padding: 1rem 0;
+  font-weight: 600;
+  font-size: 1rem;
+  user-select: none;
 }
 
-/* ხელმისაწვდომობის მხარდაჭერა */
+/* Accessibility */
 .high-contrast {
   background-color: #000 !important;
   color: #ffeb3b !important;
@@ -139,8 +128,8 @@ footer {
 .high-contrast header,
 .high-contrast nav,
 .high-contrast footer,
-.high-contrast .products,
-.high-contrast .product-card {
+.high-contrast main,
+.high-contrast section {
   background-color: #000 !important;
   color: #ffeb3b !important;
 }
@@ -150,7 +139,7 @@ footer {
   background: #222 !important;
 }
 
-/* დისპლექსიური შრიფტი */
+/* Dyslexic font */
 .dyslexic-font {
   font-family: 'OpenDyslexic', Arial, sans-serif !important;
   text-shadow: 0 0 5px rgba(0,0,0,0.1);

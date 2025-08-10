@@ -2,55 +2,74 @@
 <html lang="ka">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>კონტაქტი | HobArt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HobArt | კონტაქტი</title>
   <link rel="stylesheet" href="contact.css" />
-  <link rel="stylesheet" href="accessibility.css" />
   <script src="accessibility.js" defer></script>
 </head>
 <body>
 
-  <!-- Accessibility Button -->
   <div class="accessibility-bar">
-    <button class="accessibility-btn" data-voice-text="Accessibility options ღილაკი" aria-label="ხელმისაწვდომობის პარამეტრები">♿ Accessibility</button>
+    <button 
+      class="accessibility-btn" 
+      aria-label="Accessibility options"
+      aria-expanded="false"
+      aria-controls="accessibilityPanel"
+      id="accessibilityToggleBtn"
+    >♿ Accessibility</button>
   </div>
 
   <header>
-    <a href="home.html" class="logo">HobArt</a>
-    <nav>
-      <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="product.html">Product</a></li>
-        <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+        <div class="logo">HobArt</div>
+    <nav aria-label="მთავარი ნავიგაცია">
+  <ul>
+    <li><a href="home.html">მთავარი</a></li>
+    <li class="dropdown">
+      <button 
+        class="dropdown-btn" 
+        aria-expanded="false" 
+        aria-haspopup="true" 
+        aria-controls="productSubmenu"
+        type="button"
+      >
+        პროდუქცია ▼
+      </button>
+      <ul id="productSubmenu" class="submenu" hidden>
+        <li><a href="decorative-candles.html">დეკორატიული სანთლები</a></li>
+        <li><a href="holiday-candles.html">საახალწლო სანთლები</a></li>
+        <li><a href="epoxy.html">ეპოქსი (Epoxy)</a></li>
+        <li><a href="teak-toys.html">ტეკის სათამაშოები (Teak Toys)</a></li>
+        <li><a href="holiday-items.html">საახალწლო ნივთები</a></li>
+        <li><a href="womens-accessories.html">ქალის აქსესუარები</a></li>
       </ul>
-    </nav>
+    </li>
+    <li><a href="about.html">ჩვენს შესახებ</a></li>
+    <li><a href="contact.html">კონტაქტი</a></li>
+  </ul>
+</nav>
+
   </header>
 
-  <main>
-    <section class="contact">
-      <h2>დაგვიკავშირდით</h2>
-      <form>
-        <label for="name">სახელი:</label>
-        <input type="text" id="name" name="name" required />
+  <main tabindex="-1">
+    <section aria-labelledby="contactTitle">
+      <h2 id="contactTitle">კონტაქტი</h2>
+      <p><strong>ელ-ფოსტა:</strong> <a href="mailto:ninmaisuradze19@gmail.com">ninmaisuradze19@gmail.com</a></p>
+      <p><strong>ტელეფონი:</strong> <a href="tel:+995593585424">593 58 54 24</a></p>
+      <p><strong>მისამართი:</strong> თელავი, საქართველო</p>
 
-        <label for="email">ელ.ფოსტა:</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="message">შეტყობინება:</label>
-        <textarea id="message" name="message" required></textarea>
-
-        <button type="submit">გაგზავნა</button>
-      </form>
+      <section class="social-media" aria-label="სოციალური ქსელები">
+        <h3>სოციალური მედია</h3>
+        <ul>
+          <li><a href="https://www.facebook.com/profile.php?id=100091803975149" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li><a href="https://instagram.com/hobart0204" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/@hobart" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+        </ul>
+      </section>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 HobArt. ყველა უფლება დაცულია.</p>
-    <div class="footer-links">
-      <a href="privacy.html">კონფიდენციალურობა</a> |
-      <a href="terms.html">წესები</a>
-    </div>
   </footer>
 
 </body>

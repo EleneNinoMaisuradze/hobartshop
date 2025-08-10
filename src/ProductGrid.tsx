@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ProductGrid from '../src/ProductGrid.ts';
+import ProductGrid from '../src/ProductGrid ;
 
 const productsData = [
   {

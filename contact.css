@@ -1,34 +1,73 @@
 body {
   margin: 0;
   font-family: 'Georgia', serif;
-  background-color: #f0f6fa;
-  color: #2c3e50;
+  background-color: #fffaf3;
+  color: #4e463c;
+  line-height: 1.6;
+  font-size: 16px;
   transition: background 0.3s, color 0.3s;
 }
 
 header {
-  background-color: #4682b4;
-  padding: 1.2rem 2.5rem;
+  background-color: #2e8b57;
+  padding: 1rem 2.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 8px rgba(70,130,180,0.12);
+  color: #fff;
+  user-select: none;
 }
 
 .logo {
   font-family: 'Brush Script MT', cursive;
-  font-size: 2.2rem;
-  color: #fff;
+  font-size: 2.5rem;
   letter-spacing: 2px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.09);
+  user-select: none;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 2.2rem;
-  padding: 0;
+  gap: 2rem;
   margin: 0;
+  padding: 0;
+}
+
+/* Dropdown menu styles */
+nav ul li {
+  position: relative;
+}
+
+nav ul li ul {
+  display: none; /* თავდაპირველად არ ჩანს */
+  position: absolute;
+  background: #2e8b57;
+  top: 100%; /* პირდაპირ ქვემოთ */
+  left: 0;
+  padding: 0.5rem 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  min-width: 180px;
+  z-index: 1000;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li {
+  display: block;
+}
+
+nav ul li ul li a {
+  display: block;
+  padding: 8px 16px;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li ul li a:hover {
+  background-color: #3a9b5a;
 }
 
 nav a {
@@ -39,81 +78,72 @@ nav a {
   padding: 6px 14px;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  user-select: none;
 }
+
 nav a:hover,
 nav a.active {
-  background: #eaf4fb;
-  color: #4682b4;
+  background: #f3e9da;
+  color: #6c4e36;
 }
 
-.contact {
-  max-width: 600px;
+main {
+  max-width: 700px;
   margin: 3.5rem auto;
-  padding: 2.2rem;
-  background-color: #ffffff;
+  padding: 1rem 2rem;
+  background-color: #f3e9da;
   border-radius: 20px;
-  box-shadow: 0 4px 16px rgba(70,130,180,0.10);
+  box-shadow: 0 4px 16px rgba(188,163,139,0.15);
+  color: #4e463c;
 }
 
-.contact h2 {
-  color: #4682b4;
-  font-size: 1.7rem;
-  margin-bottom: 1.2rem;
-  letter-spacing: 1px;
-}
-
-/* დამატებული ლეიბელებისთვის */
-label {
-  font-weight: 600;
-  margin-bottom: 0.3rem;
+form label {
   display: block;
-  color: #2c3e50;
+  margin-bottom: 8px;
+  font-weight: 600;
 }
 
-.contact form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-
-input, textarea {
-  padding: 0.9rem;
-  border: 1px solid #bcd2e8;
-  border-radius: 8px;
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 16px;
+  border: 1px solid #bca38b;
+  border-radius: 6px;
   font-size: 1rem;
-  background: #f7fbfe;
-  transition: border-color 0.2s;
-}
-input:focus, textarea:focus {
-  border-color: #4682b4;
-  outline: none;
+  font-family: 'Georgia', serif;
+  color: #4e463c;
+  resize: vertical;
 }
 
-button {
-  padding: 0.9rem;
-  background-color: #4682b4;
-  color: white;
+form button {
+  background-color: #92BFC2;
   border: none;
+  padding: 12px 25px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 1.08rem;
-  font-weight: 600;
-  transition: background 0.2s;
+  transition: background-color 0.25s ease;
 }
-button:hover, button:focus {
-  background-color: #3b6a94;
+
+form button:hover,
+form button:focus {
+  background-color: #70a8a9;
 }
 
 footer {
-  background-color: #4682b4;
-  color: white;
+  background-color: #2e8b57;
+  color: #fff;
   text-align: center;
   padding: 1.2rem 0;
   font-size: 1.05rem;
-  box-shadow: 0 -2px 8px rgba(70,130,180,0.08);
+  box-shadow: 0 -2px 8px rgba(46,139,87,0.08);
 }
 
-/* ხელმისაწვდომობის მხარდაჭერა */
+/* Accessibility */
 .high-contrast {
   background-color: #000 !important;
   color: #ffeb3b !important;
@@ -121,7 +151,8 @@ footer {
 .high-contrast header,
 .high-contrast nav,
 .high-contrast footer,
-.high-contrast .contact {
+.high-contrast main,
+.high-contrast section {
   background-color: #000 !important;
   color: #ffeb3b !important;
 }
@@ -131,7 +162,7 @@ footer {
   background: #222 !important;
 }
 
-/* დისპლექსიური შრიფტი */
+/* Dyslexic font */
 .dyslexic-font {
   font-family: 'OpenDyslexic', Arial, sans-serif !important;
   text-shadow: 0 0 5px rgba(0,0,0,0.1);

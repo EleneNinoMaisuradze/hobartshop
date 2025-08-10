@@ -1,52 +1,66 @@
 <!DOCTYPE html>
 <html lang="ka">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>მთავარი | HobArt</title>
-  <link rel="stylesheet" href="home.css">
-  <link rel="stylesheet" href="accessibility.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HobArt | მთავარი</title>
+  <link rel="stylesheet" href="home.css" />
   <script src="accessibility.js" defer></script>
 </head>
 <body>
 
   <!-- Accessibility Button -->
   <div class="accessibility-bar">
-    <button class="accessibility-btn" data-voice-text="Accessibility options ღილაკი" aria-label="შესაძლებლობები">♿ Accessibility</button>
+    <button 
+      class="accessibility-btn" 
+      aria-label="Accessibility options"
+      aria-expanded="false"
+      aria-controls="accessibilityPanel"
+      id="accessibilityToggleBtn"
+    >♿ Accessibility</button>
   </div>
 
-  <!-- Header -->
   <header>
-    <div class="header-container">
-      <div class="logo">HobArt</div>
-      <nav>
-        <ul>
-          <li><a href="home.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="product.html">Product</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+        <div class="logo">HobArt</div>
+    <nav aria-label="მთავარი ნავიგაცია">
+  <ul>
+    <li><a href="home.html">მთავარი</a></li>
+    <li class="dropdown">
+      <button 
+        class="dropdown-btn" 
+        aria-expanded="false" 
+        aria-haspopup="true" 
+        aria-controls="productSubmenu"
+        type="button"
+      >
+        პროდუქცია ▼
+      </button>
+      <ul id="productSubmenu" class="submenu" hidden>
+        <li><a href="decorative-candles.html">დეკორატიული სანთლები</a></li>
+        <li><a href="holiday-candles.html">საახალწლო სანთლები</a></li>
+        <li><a href="epoxy.html">ეპოქსი (Epoxy)</a></li>
+        <li><a href="teak-toys.html">ტეკის სათამაშოები (Teak Toys)</a></li>
+        <li><a href="holiday-items.html">საახალწლო ნივთები</a></li>
+        <li><a href="womens-accessories.html">ქალის აქსესუარები</a></li>
+      </ul>
+    </li>
+    <li><a href="about.html">ჩვენს შესახებ</a></li>
+    <li><a href="contact.html">კონტაქტი</a></li>
+  </ul>
+</nav>
+
   </header>
 
-  <!-- Hero/Main -->
-  <main>
-    <section class="hero">
-      <h1>მოგესალმებით HobArt-ში</h1>
-      <p>ხელნაკეთი სანთლები, აქსესუარები და ემოცია თითოეულ ნივთში.</p>
+  <main tabindex="-1">
+    <section aria-labelledby="welcomeTitle">
+      <h2 id="welcomeTitle">მოგესალმებით HobArt-ში</h2>
+      <p>HobArt - მაღალი ხარისხის ხელნაკეთი დეკორატიული ნივთები და საჩუქრები.</p>
+      <p>ჩვენი პროდუქცია შექმნილია სითბოთი და სიყვარულით, რათა თქვენი სახლი განსაკუთრებული გახდეს.</p>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer>
-    <div class="footer-container">
-      <p>&copy; 2025 HobArt. ყველა უფლება დაცულია.</p>
-      <div class="footer-links">
-        <a href="privacy.html">კონფიდენციალურობა</a> |
-        <a href="terms.html">წესები</a>
-      </div>
-    </div>
+    <p>&copy; 2025 HobArt. ყველა უფლება დაცულია.</p>
   </footer>
 
 </body>

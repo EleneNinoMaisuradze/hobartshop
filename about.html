@@ -3,55 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ჩვენს შესახებ | HobArt</title>
+  <title>HobArt | ჩვენს შესახებ</title>
   <link rel="stylesheet" href="about.css" />
-  <link rel="stylesheet" href="accessibility.css" />
   <script src="accessibility.js" defer></script>
 </head>
 <body>
 
-  <!-- Accessibility Button -->
   <div class="accessibility-bar">
     <button 
       class="accessibility-btn" 
-      data-voice-text="Accessibility options ღილაკი" 
-      aria-label="შესაძლებლობები" 
-      aria-expanded="false" 
+      aria-label="Accessibility options"
+      aria-expanded="false"
       aria-controls="accessibilityPanel"
-      id="contrastToggleButton"
-    >
-      ♿ Accessibility
-    </button>
+      id="accessibilityToggleBtn"
+    >♿ Accessibility</button>
   </div>
 
   <header>
-    <div class="logo">HobArt</div>
+        <div class="logo">HobArt</div>
     <nav aria-label="მთავარი ნავიგაცია">
-      <ul>
-        <li><a href="home.html">მთავარი</a></li>
-        <li><a href="about.html" class="active" aria-current="page">ჩვენს შესახებ</a></li>
-        <li><a href="product.html">პროდუქცია</a></li>
-        <li><a href="contact.html">კონტაქტი</a></li>
+  <ul>
+    <li><a href="home.html">მთავარი</a></li>
+    <li class="dropdown">
+      <button 
+        class="dropdown-btn" 
+        aria-expanded="false" 
+        aria-haspopup="true" 
+        aria-controls="productSubmenu"
+        type="button"
+      >
+        პროდუქცია ▼
+      </button>
+      <ul id="productSubmenu" class="submenu" hidden>
+        <li><a href="decorative-candles.html">დეკორატიული სანთლები</a></li>
+        <li><a href="holiday-candles.html">საახალწლო სანთლები</a></li>
+        <li><a href="epoxy.html">ეპოქსი (Epoxy)</a></li>
+        <li><a href="teak-toys.html">ტეკის სათამაშოები (Teak Toys)</a></li>
+        <li><a href="holiday-items.html">საახალწლო ნივთები</a></li>
+        <li><a href="womens-accessories.html">ქალის აქსესუარები</a></li>
       </ul>
-    </nav>
+    </li>
+    
+    <li><a href="about.html">ჩვენს შესახებ</a></li>
+    <li><a href="contact.html">კონტაქტი</a></li>
+  </ul>
+</nav>
+
   </header>
 
-  <main>
-    <section class="about" aria-labelledby="aboutTitle" tabindex="-1">
+  <main tabindex="-1">
+    <section class="about" aria-labelledby="aboutTitle">
       <h2 id="aboutTitle">ჩვენს შესახებ</h2>
       <p>
-        HobArt შეიქმნა 2020 წელს. ჩვენი მისიაა თითოეულ პროდუქტში ჩავდოთ სითბო, სილამაზე და ბუნებრივი სტილი.
-        ჩვენ გვჯერა, რომ ხელნაკეთი ნივთი ატარებს ემოციას და სილამაზეს.
+        ჩვენ ვამზადებთ მრავალფეროვან ხელნაკეთ ნივთებს და საახალწლო დეკორაციებს 2021 წლიდან.  
+        HobArt არის ბრენდი, რომელიც ბედნიერებას უქმნის ყოველი მომხმარებლის ცხოვრებას.  
+        ჩვენ ვიყენებთ მაღალი ხარისხის მასალებს უნიკალური ხელნაკეთი დეკორაციების შესაქმნელად.
       </p>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 HobArt. ყველა უფლება დაცულია.</p>
-    <nav aria-label="ფუტერის მენიუ" class="footer-links">
-      <a href="privacy.html">კონფიდენციალურობა</a> |
-      <a href="terms.html">წესები</a>
-    </nav>
   </footer>
 
 </body>
